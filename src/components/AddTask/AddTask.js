@@ -1,10 +1,10 @@
 import React from "react";
 
-const AddTask = () => {
+const AddTask = props => {
   return (
     <div>
-      <input type="text" />
-      <button>Add Task</button>
+      <input type="text" value={props.defaultTask} onChange={props.updateTask} />
+      <button onClick={props.addTask}>Add Task</button>
     </div>
   );
 };
