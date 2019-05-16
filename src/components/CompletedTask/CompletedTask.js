@@ -1,6 +1,7 @@
 import React from "react";
 import { TaskContext } from "../../App";
 import Header from "../Header/Header";
+import TaskList from "../TaskList/TaskList";
 
 class CompletedTask extends React.Component {
   render() {
@@ -11,9 +12,7 @@ class CompletedTask extends React.Component {
           return (
             <div>
               <Header />
-              {completedTasks.map(task => (
-                <div key={task.id} className="completed">{task.description}</div>
-              ))}
+              <TaskList tasks={completedTasks} />
             </div>
           );
         }}
