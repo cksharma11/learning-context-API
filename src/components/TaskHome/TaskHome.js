@@ -16,7 +16,7 @@ export default class TaskHome extends React.Component {
               defaultTask={context.defaultTask}
               updateTask={context.updateTask}
             />
-            <TaskList tasks={context.tasks} />
+            <TaskList tasks={context.tasks} toggleTask={context.toggleTask} />
           </div>
         )}
       </TaskContext.Consumer>
