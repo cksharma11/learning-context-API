@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import TaskHome from "./components/TaskHome/TaskHome";
+import CompletedTask from "./components/CompletedTask/CompletedTask";
+import PendingTask from "./components/PendingTask/PendingTask";
 import './App.css'
 const TaskContext = React.createContext({});
 
@@ -50,7 +52,9 @@ class App extends React.Component {
         }}
       >
         <BrowserRouter>
-          <Route path="/" component={TaskHome} />
+          <Route path="/" exact component={TaskHome} />
+          <Route path="/completed" component={CompletedTask} />
+          <Route path="/pending" component={PendingTask} />
         </BrowserRouter>
       </TaskContext.Provider>
     );
